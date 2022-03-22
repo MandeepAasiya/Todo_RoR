@@ -1,0 +1,16 @@
+<%= link_to("<< Back to List", tasks_path, :class => 'back-link') %>
+
+<div class="tasks edit">
+  <h2>Update Task</h2>
+
+  <%= form_for(@task) do |f| %>
+
+      <%= render(:partial => 'form', :locals => {:f => f}) %>
+      
+    <div class="form-buttons">
+      <%= f.submit("Update Task") %>
+    </div>
+
+  <% end %>
+
+</div>

@@ -1,0 +1,42 @@
+<%= link_to("<< Back to List", tasks_path, :class => 'back-link') %>
+
+<div class="tasks show">
+  <h2>Show Task</h2>
+
+  <table summary="Task detail view">
+      <th>Title</th>
+      <td><%= @task.title %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @task.description %></td>
+    </tr>
+    <tr>
+      <th>Priority</th>
+      <td><%= @task.priority %></td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td><%= @task.completed ? 'Completed' : 'Pending' %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @task.created_at.strftime("%d-%b-%y %A %H:%M") %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @task.updated_at.strftime("%d-%b-%y %A %H:%M") %></td>
+    </tr>
+    <% if @task.completed %>
+      <tr>
+        <th>Completion Time</th>
+        <% if @task.completiontime != nil %>
+          <td><%= @task.completiontime.strftime("%d-%b-%y %A %H:%M") %></td>
+        <% else %>
+          <td><%= @task.created_at.strftime("%d-%b-%y %A %H:%M") %></td>
+        <% end %>
+      </tr>
+    <%end%>
+  </table>
+
+</div>

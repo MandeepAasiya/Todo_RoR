@@ -1,0 +1,22 @@
+<%= error_messages_for(f.object) %>
+
+<table summary="Task form fields">
+      <tr>
+        <th>Title</th>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td><%= f.text_area(:description) %></td>
+      </tr>
+      <tr>
+        <th>Priority</th>
+        <td><%= f.select :priority, Task.priorities.keys %></td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><%= f.radio_button :completed, true %> Completed 
+        <%= f.radio_button :completed, false %> Pending</td>
+      </tr>
+      </table>
+      <br> </br>

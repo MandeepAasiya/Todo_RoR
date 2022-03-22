@@ -1,0 +1,26 @@
+<div class="tasks index">
+  <h2>Tasks</h2>
+
+  <%= link_to("Add New Task", new_task_path, :class => 'action new') %>
+  
+  <br> </br>
+  
+  <table class="listing" summary="Task list">
+    <tr class="header">
+      <th>Tasks</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th colspan="3"> Actions </th>
+    </tr>
+    <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.title %></td>
+      <td class="center"><%= task.priority %></td>
+      <td class="center"><%= task.completed ? 'Completed' : 'Pending' %></td>
+      <td><%= link_to "Show", task_path(task) %></td>
+      <td><%= link_to "Edit", edit_task_path(task) %></td>
+      <td><%= link_to "Delete", delete_task_path(task) %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
