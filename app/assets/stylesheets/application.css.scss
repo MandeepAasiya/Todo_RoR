@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ */
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+//  $white_opaque: rgba(250, 250, 250, .3);
+//  $dark: #1F7972;
+
+
+body {
+	height: 70%;
+	background: -webkit-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	background:    -moz-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	background:     -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	font-family: 'Lato', sans-serif;
+}
+
+// .container {
+// 	width: 50%;
+// 	max-width: 750px;
+// 	//background: $white_opaque;
+// 	margin: 3em auto 0 auto;
+// 	border-radius: 7px;
+// 	-webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
+// 	box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+// 	padding: 1em 0;
+// }
+
+// ::-webkit-input-placeholder { color: $dark; }
+
+
+
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+
+  .action-new {
+	background-color: red;
+	padding: 20px;
+	overflow:auto;
+  }
+  
+  body {
+	font-family: 'Nunito', sans-serif;
+	color: #384047;
+  }
+
+  
+  table {
+	max-width: 960px;
+	margin: 10px auto;
+  }
+  
+  caption {
+	font-size: 1.6em;
+	font-weight: 400;
+	padding: 10px 0;
+  }
+  
+  tr th {
+	font-weight: 400;
+	background: #8a97a0;
+	color: #FFF;
+  }
+  
+  tr {
+	background: #f4f7f8;
+	border-bottom: 1px solid #FFF;
+	margin-bottom: 5px;
+  }
+
+  .h1anchor {
+    text-align: center;
+  }
+
+  .form-buttons {
+	//background-color: red;
+	font-size: 18px;
+	padding: 30px;
+	overflow:auto;
+	text-align: center;
+  }
+
+  .tasks-delete {
+	  text-align: center;
+  }
+
+  body {
+	  font-size: 18px;
+  }
+  
+  tr:nth-child(even) {
+	background: #e8eeef;
+  }
+  
+  th, td {
+	text-align: left;
+	padding: 20px;
+	font-weight: 300;
+  }
+  
+  tfoot tr {
+	background: none;
+  }
+  
+  tfoot td {
+	padding: 10px 2px;
+	font-size: 0.8em;
+	font-style: italic;
+	color: #8a97a0;
+  }
+
+
+

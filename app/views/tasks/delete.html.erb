@@ -1,15 +1,15 @@
 <%= link_to("<< Back to List", tasks_path, :class => 'back-link') %>
 
-<div class="tasks delete">
+<div class="tasks-delete">
   <h2>Delete Task</h2>
 
   <%= form_for(@task, :method => 'delete') do |f| %>
 
-    <p>Are you sure you want to delete?</p>
-    <p><%= @task.title %></p>
+    <h3>Are you sure you want to delete?</h3>
+    <h3><%= @task.title %></h3>
 
     <div class="form-buttons">
-      <%= f.submit("Delete Task") %>
+      <h3><%= f.submit("Delete Task") %></h3>
     </div>
 
   <% end %>

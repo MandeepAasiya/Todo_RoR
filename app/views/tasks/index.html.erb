@@ -1,7 +1,11 @@
 <div class="tasks index">
-  <h2>Tasks</h2>
 
-  <%= link_to("Add New Task", new_task_path, :class => 'action new') %>
+  <div class="h1anchor">
+  <h1>Welcome To Your ToDo List</h1> 
+
+  <h3><%= button_to("+  Add New Task", new_task_path, :method => :get , :class => 'form-buttons') %></h3>
+
+  </div>
   
   <br> </br>
   

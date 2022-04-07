@@ -1,7 +1,6 @@
 class TasksController < ApplicationController
 
   def index
-    #@tasks = Task.order('priority ASC')
     @tasks = Task.order(completed: :ASC, priority: :ASC)
   end
 
@@ -15,12 +14,16 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-    
+    if task_params[:completed] == "true"
+      @task[:completiontime] = Time.now
+      @task.save
+    end
+
     if @task.save
-      #flash[:notice] = "Task created successfully."
+      flash[:notice] = "Task created successfully."
       redirect_to(tasks_path)
     else
-      #flash[:error] = "Title cannot be empty and should not exceed 40 characters"
+      flash[:error] = "Title cannot be empty and should not exceed 40 characters"
       render('new')
     end
   end
@@ -41,7 +44,7 @@ class TasksController < ApplicationController
       flash[:notice] = "Task updated successfully."
       redirect_to(task_path(@task))
     else
-      #flash[:error] = "Title cannot be empty and should not exceed 40 characters"
+      flash[:error] = "Title cannot be empty and should not exceed 40 characters"
       render('edit')
     end
   end
@@ -53,7 +56,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    #flash[:notice] = "Task '#{@task.title}' destroyed successfully."
+    flash[:notice] = "Task '#{@task.title}' destroyed successfully."
     redirect_to(tasks_path)
   end
 
