@@ -2,6 +2,9 @@
 
 Todo-list website in Ruby on Rails, with Active-Admin gem. 
 
+<img width="1774" alt="Screenshot 2022-06-13 at 6 14 27 PM" src="https://user-images.githubusercontent.com/70024836/173356423-e245fcb5-09d3-4048-b061-7f424046cf34.png">
+
+
 * Features - 
 
 * CRUD operations on Todo items.
