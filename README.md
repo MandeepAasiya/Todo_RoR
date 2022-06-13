@@ -12,7 +12,7 @@ Todo-list website in Ruby on Rails, with Active-Admin gem.
 # Starting the website - 
 
 * download the code and open it in terminal.
-* bundle install
-* rails db:migrate
+* run "bundle install"
+* run "rails db:migrate"
 * open http://localhost:3000/ in browser.
 
