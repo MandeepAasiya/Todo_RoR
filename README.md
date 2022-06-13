@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Todo-list website in Ruby on Rails, with Active-Admin gem. 
 
-Things you may want to cover:
+* Features - 
 
-* Ruby version
+* CRUD operations on Todo items.
+* Todo items have features like priority, status, time of creation, time of completion etc. 
+* Active Admin gem for creating administration style interface. 
 
-* System dependencies
 
-* Configuration
+# Starting the website - 
 
-* Database creation
+* download the code and open it in terminal.
+* bundle install
+* rails db:migrate
+* open http://localhost:3000/ in browser.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
